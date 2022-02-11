@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/music.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <main class="music">
+        <section class="dashboard">
+            <div class="header">
+                <h4 class="header__title">Now playing</h4>
+                <h2 class="header__song">You Raise Me Up</h2>
+                <div class="header__icon"><i class="fas fa-plus"></i></div>
+            </div>
+
+            <div class="compact-disc">
+                <div class="compact-disc__inner">
+                    <div class="compact-disc__thumb"></div>
+                </div>
+            </div>
+
+            <div class="control">
+                <div class="btn btn-repeat">
+                    <i class="fas fa-redo icon-repeat"></i>
+                </div>
+                <div class="btn btn-prev">
+                    <i class="fas fa-backward icon-prev"></i>
+                </div>
+                <div class="btn btn-toggle-play">
+                    <i class="fas fa-play icon-play"></i>
+                    <i class="fas fa-pause icon-pause"></i>
+                </div>
+                <div class="btn btn-next">
+                    <i class="fas fa-forward icon-next"></i>
+                </div>
+                <div class="btn btn-random">
+                    <i class="fas fa-random icon-random"></i>
+                </div>
+            </div>
+
+            <input type="range" class="progress" name="progress" id="progress" value="0" min="0" step="1" max="100">
+            <audio id="audio" src=""></audio>
+        </section>
+        <section class="playlist">
+            <!-- <div class="song" data-index="1">
+                <div class="image" style="background-image: url('./assets/images/singer0.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Cry On My Shoulder</h3>
+                    <p class="author">Nanamori</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song active" data-index="2">
+                <div class="image" style="background-image: url('./assets/images/singer1.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Forever Alone</h3>
+                    <p class="author">JustaTee</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum active">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="3">
+                <div class="image" style="background-image: url('./assets/images/singer2.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">K-NAAN-Wavin-Flag</h3>
+                    <p class="author">Anh Duy</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="4">
+                <div class="image" style="background-image: url('./assets/images/singer3.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">My Love</h3>
+                    <p class="author">Grace Karnklao</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="5">
+                <div class="image" style="background-image: url('./assets/images/singer4.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Pokemon Pikachu Dance</h3>
+                    <p class="author">Jasmine Rae</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="6">
+                <div class="image" style="background-image: url('./assets/images/singer5.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Reality</h3>
+                    <p class="author">Madeline</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="7">
+                <div class="image" style="background-image: url('./assets/images/singer6.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Shape of You</h3>
+                    <p class="author">Ed Sheeran</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="8">
+                <div class="image" style="background-image: url('./assets/images/singer7.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Shape-Of-You-SlimV</h3>
+                    <p class="author">Ed Sheeran</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="9">
+                <div class="image" style="background-image: url('./assets/images/singer8.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">Until You</h3>
+                    <p class="author">Shayne Ward</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div>
+
+            <div class="song" data-index="10">
+                <div class="image" style="background-image: url('./assets/images/singer9.jpg')">
+                </div>
+                <div class="body">
+                    <h3 class="title">You Raise Me Up</h3>
+                    <p class="author">Westlife</p>
+                </div>
+                <div class="option">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="spectrum">
+                    <div class="bar"></div>
+                </div>
+            </div> -->
+        </section>
+    </main>
+    <script src="./main.js"></script>
+</body>
+</html>
